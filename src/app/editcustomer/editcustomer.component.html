@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Update User</h1>
+<form [formGroup]="registerform" (ngSubmit)="UpdateUser()">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>ID</mat-label>
+                <input matInput formControlName="code">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <mat-label>Credit Limit</mat-label>
+                <input type="number" matInput formControlName="creditlimit">
+            </mat-form-field>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+        <button matTooltip="Submit the credentials"
+            aria-label="Button that displays a tooltip when focused or hovered over" type="submit" mat-raised-button
+            color="primary" cdkFocusInitial>Save</button>
+        <button mat-raised-button color="warn" mat-dialog-close>Close</button>
+    </div>
+</form>
